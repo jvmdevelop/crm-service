@@ -26,6 +26,12 @@
 - react frontend with TypeScript
 - ant design UI components
 - docker compose support
+- password encryption
+- role-based access control
+- email verification
+- password reset functionality
+- cors configuration
+
 
 ## Installation
 
@@ -61,19 +67,6 @@ cd crm-service
 docker-compose up
 ```
 
-## Usage
-
-### Configuration
-
-Configure your `application.properties`:
-
-```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/crm_service
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
-```
-
 ### Running the application:
 
 **Backend:**
@@ -87,116 +80,7 @@ mvn spring-boot:run
 cd frontend
 npm run dev
 ```
-
-The application will be available at:
-- Backend API: `http://localhost:8080`
-- Frontend: `http://localhost:5173`
-
-## API Endpoints
-
-### Authentication
-
-| Endpoint | Method | Description |
-|:---------|:------:|:------------|
-| `/api/auth/register` | POST | register new user |
-| `/api/auth/login` | POST | user login |
-| `/api/auth/me` | GET | get current user |
-| `/api/auth/reset-password/initiate` | POST | initiate password reset |
-| `/api/auth/reset-password` | POST | reset password |
-
-### Project Management
-
-| Endpoint | Method | Description |
-|:---------|:------:|:------------|
-| `/api/projects` | GET | get all projects |
-| `/api/projects` | POST | create new project |
-| `/api/projects/{id}` | PUT | update project |
-| `/api/projects/{id}` | DELETE | delete project |
-
-### Task Management
-
-| Endpoint | Method | Description |
-|:---------|:------:|:------------|
-| `/api/tasks` | GET | get all tasks |
-| `/api/tasks` | POST | create new task |
-| `/api/tasks/{id}` | PUT | update task |
-| `/api/tasks/{id}` | DELETE | delete task |
-
-## Project Structure
-
-- `backend/` - Spring Boot backend application
-  - `src/main/java/com/mono/` - main package
-  - `controllers/` - rest api controllers
-  - `service/` - business logic services
-  - `models/` - JPA entities
-  - `repository/` - repository interfaces
-  - `security/` - security configuration
-  - `dto/` - data transfer objects
-- `frontend/` - React frontend application
-  - `src/` - source code
-  - `src/components/` - React components
-  - `src/pages/` - page components
-  - `src/store/` - redux store
-
-## Examples
-
-Register a new user:
-
-```bash
-curl -X POST http://localhost:8080/api/auth/register \
-  -H "Content-Type: application/json" \
-  -d '{"username": "john_doe", "email": "john@example.com", "password": "securePassword"}'
-```
-
-Create a new project:
-
-```bash
-curl -X POST http://localhost:8080/api/projects \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR_JWT_TOKEN" \
-  -d '{"name": "New Project", "description": "Project description"}'
-```
-
-Create a new task:
-
-```bash
-curl -X POST http://localhost:8080/api/tasks \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR_JWT_TOKEN" \
-  -d '{"title": "Complete setup", "description": "Initial setup task", "projectId": 1}'
-```
-
-## Dependencies
-
-### Backend:
-- spring boot 3.3.4
-- spring security
-- spring data JPA
-- spring mail
-- postgresql driver
-- JWT (jjwt)
-- lombok
-- SpringDoc OpenAPI
-- swagger UI
-
-### Frontend:
-- react 18.3.1
-- typescript
-- ant design
-- redux toolkit
-- react router
-- axios
-- tailwind css
-- vite
-
-## Security Features
-
-- jwt-based authentication
-- password encryption
-- role-based access control
-- email verification
-- password reset functionality
-- cors configuration
+## (api endpoints) [docs/api-endpoints.md]
 
 ## Contributing
 
