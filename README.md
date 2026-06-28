@@ -80,7 +80,7 @@ mvn spring-boot:run
 cd frontend
 npm run dev
 ```
-## (api endpoints) [docs/api-endpoints.md]
+## (api endpoints)[docs/api-endpoints.md]
 
 ## Contributing
 
