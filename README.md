@@ -33,56 +33,10 @@
 - cors configuration
 
 
-## Installation
-
-### Prerequisites:
-
-- java 17 
-- maven 3.6+
-- postgresql database
-- node.js 18+
-- docker & docker compose 
-
-### Backend Setup:
-
-```bash
-git clone git@github.com:jvmdevelop/crm-service.git
-cd crm-service/backend
-mvn clean install
-mvn spring-boot:run
-```
-
-### Frontend Setup:
-
-```bash
-cd crm-service/frontend
-npm install
-npm run dev
-```
-
-### With Docker Compose:
-
-```bash
-cd crm-service
-docker-compose up
-```
-
-### Running the application:
-
-**Backend:**
-```bash
-cd backend
-mvn spring-boot:run
-```
-
-**Frontend:**
-```bash
-cd frontend
-npm run dev
-```
+## [installation](docs/installation.md)
 ## [api endpoints](docs/api-endpoints.md)
 
-## [contributing](docs/contributing]
+## [contributing](docs/contributing.md]
 
 
 ## License
