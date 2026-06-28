@@ -35,7 +35,7 @@
 
 ## [installation](docs/installation.md)
 ## [api endpoints](docs/api-endpoints.md)
-## [contributing](docs/contributing.md)
+## [contributing](docs/contribuitng.md)
 
 
 ## License
